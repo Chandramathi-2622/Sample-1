@@ -1,11 +1,8 @@
-name: Hello YAML
+trigger:
+- master
 
-on:
-  push:
+pool:
+  vmImage: ubuntu-latest
 
-jobs:
-  say-hello:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print message
-        run: echo "Hello from a YML program!"
+steps:
+- task: Maven@3
